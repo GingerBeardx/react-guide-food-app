@@ -5,7 +5,7 @@ const Cart = (props) => {
   const cartItems = [
     { id: "c1", name: "Sushi", quantity: 2, itemPrice: 22.99 },
     { id: "c2", name: "Schnitzel", quantity: 1, itemPrice: 16.5 },
-  ].map((item) => <li>{item.name}</li>);
+  ].map((item) => <li key={item.id}>{item.name}</li>);
 
   return (
     <Modal onClose={props.onClose}>
